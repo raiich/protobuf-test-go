@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "./generated/pb";
+
+message MyU32 {
+  uint32 u32 = 1;
+}
+
+message MyStr {
+  string str = 1;
+}
+
+message MySub {
+  MyStr sub = 1;
+}
+
+message MyRepeated {
+  repeated uint32 u32 = 1;
+  repeated string str = 2;
+}
