@@ -10,8 +10,8 @@ message MyStr {
   string str = 1;
 }
 
-message MyNest {
-  MyStr str = 1;
+message MySub {
+  MyStr sub = 1;
 }
 
 message MyRepeated {

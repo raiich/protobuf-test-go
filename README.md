@@ -1,51 +1,29 @@
+# protobuf-test-go
 
+## Tasks
+
+### make init
+
+After `git clone`, run the following commands: 
 
 ```shell
 make init
 ```
 
+`make init` will install the necessary tools and dependencies.
 
 
+### make generate
 
 
-
-## Scalar Value Types 
-
-float, uint32
-
-string
-
-
----
-
-- optional
-- repeated
-- map
-
-
-Maps
-
-Map fields are just a shorthand for a special kind of repeated field.
-If we have
-
-```protobuf
-message Test6 {
-  map<string, int32> g = 7;
-}
+```shell
+make generate
 ```
 
-this is actually the same as
+### make test
 
-```protobuf
-message Test6 {
-  message g_Entry {
-    optional string key = 1;
-    optional int32 value = 2;
-  }
-  repeated g_Entry g = 7;
-}
+```shell
+make test
 ```
 
-## Nested Types 
-
-message
+This will run [inspection_test.go](inspection_test.go).
