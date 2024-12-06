@@ -1,14 +1,20 @@
 syntax = "proto3";
 
-option go_package = "github.com/raiich/protobuf-test-go/generated/pb";
+option go_package = "./generated/pb";
 
-message MyMessage {
-  double m_double = 1;
-  uint32 m_uint32 = 2;
-  string m_string = 3;
+message MyU32 {
+  uint32 u32 = 1;
+}
+
+message MyStr {
+  string str = 1;
 }
 
 message MyNest {
-  MyMessage message1 = 1;
-  MyMessage message2 = 2;
+  MyStr str = 1;
+}
+
+message MyRepeated {
+  repeated uint32 u32 = 1;
+  repeated string str = 2;
 }
